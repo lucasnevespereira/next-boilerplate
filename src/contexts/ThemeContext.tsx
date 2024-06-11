@@ -17,7 +17,7 @@ export const ThemeProvider = ({ children }: any) => {
   }, [])
 
   if (!isMounted) {
-    return <>Loading...</>
+    return null
   }
 
   const changeTheme = (theme: string) => {

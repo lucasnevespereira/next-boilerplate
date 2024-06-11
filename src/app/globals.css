@@ -7,6 +7,14 @@
   margin: 0 auto;
 }
 
+html,
+body,
+.app {
+  margin: 0;
+  height: 100%;
+}
+
+
 .logo {
   font-size: 1em;
   font-weight: bold;
