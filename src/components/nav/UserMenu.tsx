@@ -4,6 +4,8 @@ import { useKindeBrowserClient } from "@kinde-oss/kinde-auth-nextjs";
 import { useState } from "react";
 import Image from "next/image";
 import Avatar from "../ui/Avatar";
+import Link from "next/link";
+import {LogOut} from "lucide-react";
 
 const UserMenu = () => {
   const { user } = useKindeBrowserClient();
@@ -20,14 +22,23 @@ const UserMenu = () => {
     <div className="dropdown dropdown-end">
       <Avatar picture={picture} toggleDropdown={toggleDropdown} />
       {dropdownOpen && (
-        <ul
-          tabIndex={0}
-          className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52"
-        >
-          <li>
-            <LogoutLink className="block w-full text-left text-sm">Logout</LogoutLink>
-          </li>
-        </ul>
+          <ul
+              tabIndex={0}
+              className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52"
+          >
+            <li>
+              <Link href={"/profile"} className="block w-full text-left text-sm">Profile</Link>
+            </li>
+            <li>
+              <Link href={"/settings"} className="block w-full text-left text-sm">Settings</Link>
+            </li>
+            <li>
+              <LogoutLink className="flex w-full text-left text-sm">
+                Logout
+                <LogOut className="w-4"/>
+              </LogoutLink>
+            </li>
+          </ul>
       )}
     </div>
   )
