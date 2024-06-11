@@ -17,3 +17,10 @@
     text-wrap: balance;
   }
 }
+
+/* 
+This will apply rounded-full to all 'btn' classes 
+ .btn {
+  @apply rounded-full;
+}
+*/
