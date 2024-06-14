@@ -2,12 +2,15 @@
 
 import React, {useState} from "react";
 import axios from "axios";
+import {Notification} from "@/constants";
+import {useToaster} from "@/contexts/toaster/ToasterContext";
 
 type DeleteUserButtonProps = {
     userId: string;
 };
 
 const DeleteAccountButton: React.FC<DeleteUserButtonProps> = ({userId}) => {
+    const {showToast} = useToaster();
     const [isLoading, setIsLoading] = useState(false);
     const deleteAccount = async () => {
         setIsLoading(true);
@@ -19,7 +22,7 @@ const DeleteAccountButton: React.FC<DeleteUserButtonProps> = ({userId}) => {
             });
             const {code, message} = data;
             if (code === 'OK') {
-                console.log(message);
+                showToast(message, Notification.INFO);
                 window.location.href = "/api/auth/logout";
             }
         } catch (error) {

@@ -6,3 +6,10 @@ export enum Theme {
   CUPCAKE = "cupcake",
   CUSTOM_THEME = "custom-theme",
 }
+
+export enum Notification {
+    INFO = "info",
+    SUCCESS = "success",
+    WARNING = "warning",
+    ERROR = "error",
+}

@@ -1,5 +1,5 @@
 import { Theme } from "@/constants";
-import { ThemeContext } from "@/contexts/ThemeContext";
+import { ThemeContext } from "@/contexts/theme/ThemeContext";
 import { Moon, Sun } from "lucide-react";
 import { useContext } from "react";
 

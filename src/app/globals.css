@@ -32,3 +32,11 @@ This will apply rounded-full to all 'btn' classes
   @apply rounded-full;
 }
 */
+
+.alert-warning {
+  @apply bg-warning text-base-100;
+}
+
+.alert-error {
+  @apply bg-error text-base-100;
+}
