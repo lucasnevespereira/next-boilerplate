@@ -1,14 +1,7 @@
 import {getKindeServerSession} from "@kinde-oss/kinde-auth-nextjs/server";
-import {redirect} from "next/navigation";
-import Avatar from "@/components/ui/Avatar";
-
 
 const Profile = async () => {
-    const {isAuthenticated, getUser} = getKindeServerSession();
-    if (!(await isAuthenticated())) {
-        redirect("/");
-    }
-
+    const { getUser} = getKindeServerSession();
     const user = await getUser();
 
     return (

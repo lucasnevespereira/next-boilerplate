@@ -13,7 +13,7 @@ const Avatar: React.FC<AvatarProps> = ({ picture, toggleDropdown }) => {
       onClick={toggleDropdown}
     >
       <div className="w-10 rounded-full">
-        <Image width={64} height={64} objectFit="cover" src={picture} alt="user picture" />
+        <Image width={64} height={64} src={picture} alt="user picture" />
       </div>
     </div>
   );
