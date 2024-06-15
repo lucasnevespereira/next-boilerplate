@@ -13,3 +13,5 @@ export enum Notification {
     WARNING = "warning",
     ERROR = "error",
 }
+
+export const PREMIUM_SUB_PRICE_ID = "price_1PS3FOFSFdHel3gPR8ayqnW6"

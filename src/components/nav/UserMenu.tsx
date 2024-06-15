@@ -2,7 +2,6 @@
 import { LogoutLink } from "@kinde-oss/kinde-auth-nextjs/components"
 import { useKindeBrowserClient } from "@kinde-oss/kinde-auth-nextjs";
 import { useState } from "react";
-import Image from "next/image";
 import Avatar from "../ui/Avatar";
 import Link from "next/link";
 import {LogOut} from "lucide-react";
@@ -31,6 +30,9 @@ const UserMenu = () => {
             </li>
             <li>
               <Link href={"/settings"} className="block w-full text-left text-sm">Settings</Link>
+            </li>
+            <li>
+              <Link href={"/billing"} className="block w-full text-left text-sm">Billing</Link>
             </li>
             <li>
               <LogoutLink className="flex w-full text-left text-sm">
